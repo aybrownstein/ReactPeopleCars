@@ -19,7 +19,7 @@ const {data} = await axios.get(`/api/home/getperson?id=${personId}`);
 this.setState({person: data});
     }
 
-    onTextChange = e =>{
+    onTextChange = e => {
 const nextState = produce(this.state, draft => {
     draft[e.target.name] = e.target.value;
 });

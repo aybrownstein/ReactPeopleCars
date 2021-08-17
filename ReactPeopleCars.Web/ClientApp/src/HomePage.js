@@ -31,7 +31,7 @@ componentDidMount = async () => {
         </tr>
     </thead>
     <tbody>
-{this.state.people.map(p => <PersonRow Person={p} key={p.id}/>)}
+{this.state.people.map(p => <PersonRow person={p} key={p.id}/>)}
     </tbody>
 </table>
         </>
