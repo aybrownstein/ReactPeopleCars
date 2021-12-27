@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using ReactPeopleCars.Data;
+using ReactPeopleCars.Web.Models;
 
 namespace ReactPeopleCars.Web.Controllers
 {
@@ -61,10 +62,10 @@ namespace ReactPeopleCars.Web.Controllers
 
         [HttpPost]
         [Route("deletecars")]
-        public void DeleteCars(int personId)
+        public void DeleteCars(DeleteViewModel vm)
         {
             var repo = new PCRepository(_connectionString);
-            repo.Delete(personId);
+            repo.Delete(vm.PersonId);
         }
     }
 }

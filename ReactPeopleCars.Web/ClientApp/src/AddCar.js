@@ -40,11 +40,11 @@ this.setState(nextState);
             <div className="row">
                 <div className="col-md-6 offsett-md-3 card card-body bg-light">
                     {firstName && <h2>Add a car for {firstName} {lastName}</h2>}
-                    <input type="text" className="form-control" name="make" value={make} onTextChange={this.onTextChange} placeholder="Make"/>
+                    <input type="text" className="form-control" name="make" value={make} onChange={this.onTextChange} placeholder="Make"/>
                     <br/>
-                    <input type="text" className="form-control" name="model" value={model} onTextChange={this.onTextChange} placeholder="Model"/>
+                    <input type="text" className="form-control" name="model" value={model} onChange={this.onTextChange} placeholder="Model"/>
                     <br/>
-                    <input type="text" className="form-control" name="year" value={year} onTextChange={this.onTextChange} placeholder="Year"/>
+                    <input type="text" className="form-control" name="year" value={year} onChange={this.onTextChange} placeholder="Year"/>
                     <br/>
                     <button className="btn btn-primary btn-block" onClick={this.onSubmitClick}>Submit</button>
                 </div>

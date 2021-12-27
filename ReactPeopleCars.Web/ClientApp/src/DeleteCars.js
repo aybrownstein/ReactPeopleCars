@@ -9,14 +9,14 @@ class DeleteCars extends React.Component{
     }
 
     componentDidMount = async () => {
-const {personID} = this.props.match.params;
-const {data} = await axios.get(`/api/home/getcars?personId=${personID}`);
+const {personId} = this.props.match.params;
+const {data} = await axios.get(`/api/home/getcars?personId=${personId}`);
 this.setState({cars: data});
     }
 
     onDeleteClick = async () => {
-        const {personID} = this.props.match.params;
-        await axios.post('/api/home/deletecars', {personID});
+        const {personId} = this.props.match.params;
+        await axios.post('/api/home/deletecars', {personId});
         this.props.history.push('/'); 
     }
 
@@ -41,7 +41,7 @@ this.setState({cars: data});
               </div>
               <div className="row">
                   <div className="col-md-12">
-                      <h3>Are You Sure You Want to Delete All Your Caes?</h3>
+                      <h3>Are You Sure You Want to Delete All Your Cars?</h3>
                   </div>
                  <div className="col-md-6" style={{marginTop: 20}}>
                      <Link to='/' style={{textDecoration: 'none'}}>
